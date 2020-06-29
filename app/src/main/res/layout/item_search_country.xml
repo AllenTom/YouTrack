@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/item_state_background"
+        android:onClick="@{viewModel.onItemClick}"
+        android:onLongClick="@{view -> viewModel.onItemLongClick(view)}"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@={viewModel.region}"
+            android:textColor="@color/textColor82"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={viewModel.symbol}"
+            android:textColor="@color/textColor36" />
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.allentom.youtrack.ui.search.SearchCountryItemViewModel" />
+    </data>
+</layout>
